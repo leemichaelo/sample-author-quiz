@@ -6,11 +6,14 @@ import Footer from './Footer';
 import './App.css';
 import './bootstrap.min.css';
 
-function AuthorQuiz({ turnData }) {
+function AuthorQuiz({ turnData, highlight, onAnswerSelected }) {
   return (
     <div className="container-fluid">
       <Hero />
-      <Turn {...turnData} />
+      <Turn
+        {...turnData}
+        highlight={highlight}
+        onAnswerSelected={onAnswerSelected} />
       <Continue />
       <Footer />
     </div>
